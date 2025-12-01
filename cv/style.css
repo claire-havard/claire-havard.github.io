@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 360;
+  line-height: 1.5;
+  font-size: 14px;
+}
+body .dispmob {
+  display: none;
+}
+@media screen and (min-width: 767.5px) {
+  body {
+    font-size: clamp(14px, 1vw, 16px);
+  }
+  body .dispmob {
+    display: initial;
+  }
+}
+body .main {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 5vw;
+  padding: 0 8vw;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 767.5px) {
+  body .main {
+    max-width: 1280px;
+    padding: 0 8vw;
+    margin: 5vw auto;
+  }
+}
+body .main .identity {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: flex-end;
+  max-height: 100dvh;
+}
+body .main .identity .monogramme {
+  width: 10em;
+  height: 45vh;
+  background: bottom right/cover no-repeat url("img/cv-monogramme.svg");
+}
+@media screen and (min-width: 767.5px) {
+  body .main .identity .monogramme {
+    width: 7em;
+    height: 20em;
+  }
+}
+body .main .identity .name {
+  font-weight: 700;
+  font-size: 3.75em;
+  line-height: 1;
+  margin: 0;
+}
+body .main .identity .subtitle {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0.25em 0 0;
+  text-transform: lowercase;
+  line-height: 1.2;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .identity {
+    flex-direction: column;
+    gap: 1.2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 32%;
+    box-sizing: border-box;
+    padding-left: 3%;
+  }
+}
+body .main .identity .contact {
+  margin: 1em -0.1em 0;
+}
+body .main .identity .contact .link {
+  display: inline-block;
+  padding: 0.65em 1.2em;
+  border: solid #111a21 1px;
+  border-radius: 2em;
+  margin: 0.5em 0.25em 0;
+  transition: color 480ms ease-in-out, background-color 280ms ease-in-out;
+}
+body .main .identity .contact .link:link, body .main .identity .contact .link:visited {
+  text-decoration: none;
+  color: #111a21;
+}
+body .main .identity .contact .link:hover, body .main .identity .contact .link:active {
+  text-decoration: none;
+  color: white;
+  background-color: #111a21;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume {
+    margin: 0 0 0 auto;
+    width: 70%;
+  }
+}
+body .main .resume .title {
+  font-weight: 700;
+  font-size: 2em;
+  color: #00a095;
+  margin: 2.5em 0 0;
+  line-height: 1.2;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .title {
+    width: 75%;
+    margin: 1.5em 0 0 auto;
+  }
+}
+body .main .resume .entry {
+  margin: 2.5em 0 3.5em;
+  position: relative;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .entry {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: flex-end;
+    gap: 1.25em;
+    margin: 1.3em 0;
+  }
+}
+body .main .resume .entry::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #111a21;
+  top: -0.75em;
+  opacity: 0.5;
+  left: 0;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .entry::before {
+    display: none;
+  }
+}
+body .main .resume .entry .date {
+  font-style: italic;
+  margin: 0;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .entry .date {
+    text-align: right;
+    text-transform: lowercase;
+  }
+}
+body .main .resume .entry .job .job-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.125em;
+}
+body .main .resume .entry .job .job-name .software {
+  font-size: 0;
+}
+body .main .resume .entry .job .job-name .soft-icon {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: 0.15em;
+}
+body .main .resume .entry .job .job-name .soft-icon#ps {
+  background: center/contain no-repeat url("img/cv-photoshop.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#indd {
+  background: center/contain no-repeat url("img/cv-indd.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#ai {
+  background: center/contain no-repeat url("img/cv-illustrator.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#ae {
+  background: center/contain no-repeat url("img/cv-after.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#pe {
+  background: center/contain no-repeat url("img/cv-premiere.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#me {
+  background: center/contain no-repeat url("img/cv-media.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#br {
+  background: center/contain no-repeat url("img/cv-bridge.svg");
+}
+body .main .resume .entry .job .job-name .soft-icon#xd {
+  background: center/contain no-repeat url("img/cv-xd.svg");
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .entry .job .job-name .soft-icon {
+    transform: translateY(0.5em);
+    position: relative;
+    padding: 0.15em;
+  }
+  body .main .resume .entry .job .job-name .soft-icon::before, body .main .resume .entry .job .job-name .soft-icon::after {
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+    left: 50%;
+    will-change: opacity;
+  }
+  body .main .resume .entry .job .job-name .soft-icon::before {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: 130%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.2;
+    font-weight: 400;
+    color: white;
+    background-color: #111a21;
+    padding: 0.5em;
+    border-radius: 0.3em;
+  }
+  body .main .resume .entry .job .job-name .soft-icon::after {
+    content: "";
+    position: absolute;
+    bottom: calc(130% - 5px);
+    transform: translateX(-50%);
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #111a21 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.18s ease-out;
+  }
+  body .main .resume .entry .job .job-name .soft-icon:hover::before, body .main .resume .entry .job .job-name .soft-icon:focus::before, body .main .resume .entry .job .job-name .soft-icon:hover::after, body .main .resume .entry .job .job-name .soft-icon:focus::after {
+    opacity: 1;
+  }
+}
+body .main .resume .entry .job .job-description {
+  margin: 0.5em 0 0;
+  font-weight: 500;
+}
+body .main .resume .entry .job .job-list {
+  margin: 0.5em 0 0;
+  padding: 0 0 0 1em;
+}
+body .main .resume .entry .job .job-list .mission {
+  margin: 0.5em 0 0 0;
+}
+@media screen and (min-width: 767.5px) {
+  body .main .resume .entry .job {
+    width: 75%;
+  }
+}
+body .main .resume.competence .date {
+  text-transform: none;
+}
+body .main .resume.competence .competence-list {
+  font-weight: 800;
+  margin: 0;
+  width: 70%;
+}/*# sourceMappingURL=style.css.map */
